@@ -1,0 +1,56 @@
+/* window */
+/* CSS Selector for the entire wofi window */
+/* outer-box (#outer-box) */
+/* Selector for a box that everything else sits inside of */
+/* input (#input) */
+/* Selector for the text box for filtering items */
+/* scroll (#scroll) */
+/* Selector for the scroll window containing inner-box */
+/* inner-box (#inner-box) */
+/* Selector for the box containing all entries */
+/* entry (#entry) */
+/* Selector for the box containing text and if present, images */
+/* text (#text) */
+/* Selector for the box containing the name of the program/option inserted */
+/* img (#img) */
+/* Selector for images displayed in entries */
+window {
+	background-color:cyan;
+	color:#453032;
+	opacity: 0.85;
+	border: 3px solid orange;
+	margin: 5px;
+}
+
+#input {
+	background-color:purple;
+	border: 3px solid darkgreen;
+	margin: 5px;
+	font-size: 20px;
+}
+
+#inner-box {
+	margin: 5px;
+}
+
+#outer-box {
+	margin: 5px;
+}
+
+#entry {
+	margin: 5px;
+}
+
+#text {
+	text-align: center;
+	margin-left: 25px;
+}
+
+#text:selected {
+	font-size: 30px;
+	color: darkgreen;
+}
+
+#entry:selected {
+	background-color: black;
+}
