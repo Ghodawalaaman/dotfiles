@@ -51,7 +51,7 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #
 # Example configuration:
 #
-input "10182:3395:DELL0AB0:00_27C6:0D43_Touchpad" {
+input "2:7:SynPS/2_Synaptics_TouchPad" {
     dwt enabled
     tap enabled
     natural_scroll enabled
@@ -223,12 +223,16 @@ default_border none
 default_border pixel 2
 
 # Adding some gaps between windows
-gaps outer 10
-gaps inner 10
+gaps outer 3
+gaps inner 3
 
 # sound setting
 #bindsym $mod+Shift++ exec "pactl set-sink-volume 0 +5%"
 #bindsym $mod+- exec "pactl set-sink-volume 0 -5%"
+
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 
 
 include /etc/sway/config.d/*
